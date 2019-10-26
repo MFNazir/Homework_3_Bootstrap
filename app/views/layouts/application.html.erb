@@ -5,18 +5,39 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <div id="main">
-    <div id="header">
-        <h1>Appointment Manager - Muhammad Nazir </h1>
-        <%= link_to 'Physicians', physicians_path %>
-        <%= link_to 'Appointments', appointments_path %>
-        <%= link_to 'Patients', patients_path %>
-    </div>
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Appointents Manager - Muhammad Nazir</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+   
+        <a class="btn btn-outline-info" href="/physicians" role="button">
+          Physicians
+          </a>
+      </li>
+      <div style="padding-left: 5px;"></div>
+      <li class="nav-item">
+        <a class="btn btn-outline-info" href="/appointments" role="button">
+          Appointments
+          </a>
+      </li>
+      <div style="padding-left: 5px;"></div>
+      <li class="nav-item">
+        <a class="btn btn-outline-info`" href="/patients" role="button">
+          Patients
+          </a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
 <%= yield %>
 </body>
 </html>
